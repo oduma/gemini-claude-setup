@@ -9,12 +9,12 @@ Using filesystem tools or local shell commands, create the complete app-agnostic
 - `{{args}}/docs/plans/`
 - `{{args}}/docs/requirements/`
 - `{{args}}/docs/specs/assets/`
-- `{{args}}/.gemini/`
+- `{{args}}/.antigravity/`
 
 ---
 
 ### 2. Copy Shared Baseline Agents
-Execute shell commands or tool calls to copy the universal agent files from `~/.gemini/templates/.claude/agents/` to `{{args}}/.claude/agents/`:
+Execute shell commands or tool calls to copy the universal agent files from `~/.antigravity/templates/.claude/agents/` to `{{args}}/.claude/agents/`:
 
 **Files to copy:**
 1. `back-end-architect.md`
@@ -26,13 +26,13 @@ Execute shell commands or tool calls to copy the universal agent files from `~/.
 
 **Execution Command:**
 ```bash
-!{cp ~/.gemini/templates/.claude/agents/back-end-architect.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/security-officer.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/senior-NET-developer.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/solution-architect.agent.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/SQL-developer.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/TDD-Specialist.md "{{args}}/.claude/agents/" 2>/dev/null || copy "%USERPROFILE%\.gemini\templates\.claude\agents\back-end-architect.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.gemini\templates\.claude\agents\security-officer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.gemini\templates\.claude\agents\senior-NET-developer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.gemini\templates\.claude\agents\solution-architect.agent.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.gemini\templates\.claude\agents\SQL-developer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.gemini\templates\.claude\agents\TDD-Specialist.md" "{{args}}\.claude\agents\"}
+!{cp ~/.antigravity/templates/.claude/agents/back-end-architect.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/.claude/agents/security-officer.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/.claude/agents/senior-NET-developer.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/.claude/agents/solution-architect.agent.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/.claude/agents/SQL-developer.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/.claude/agents/TDD-Specialist.md "{{args}}/.claude/agents/" 2>/dev/null || copy "%USERPROFILE%\.antigravity\templates\.claude\agents\back-end-architect.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.antigravity\templates\.claude\agents\security-officer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.antigravity\templates\.claude\agents\senior-NET-developer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.antigravity\templates\.claude\agents\solution-architect.agent.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.antigravity\templates\.claude\agents\SQL-developer.md" "{{args}}\.claude\agents\" && copy "%USERPROFILE%\.antigravity\templates\.claude\agents\TDD-Specialist.md" "{{args}}\.claude\agents\"}
 ```
 
 ---
 
 ### 3. Copy Shared Baseline Constitutions
-Execute shell commands or tool calls to copy the universal constitution files from `~/.gemini/templates/docs/constitution/` to `{{args}}/docs/constitution/`:
+Execute shell commands or tool calls to copy the universal constitution files from `~/.antigravity/templates/docs/constitution/` to `{{args}}/docs/constitution/`:
 
 **Files to copy:**
 1. `coding-principles.md`
@@ -41,5 +41,5 @@ Execute shell commands or tool calls to copy the universal constitution files fr
 
 **Execution Command:**
 ```bash
-!{cp ~/.gemini/templates/docs/constitution/coding-principles.md "{{args}}/docs/constitution/" && cp ~/.gemini/templates/docs/constitution/DDD-architecture.md "{{args}}/docs/constitution/" && cp ~/.gemini/templates/docs/constitution/tdd.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\.gemini\templates\docs\constitution\coding-principles.md" "{{args}}\docs\constitution\" && copy "%USERPROFILE%\.gemini\templates\docs\constitution\DDD-architecture.md" "{{args}}\docs\constitution\" && copy "%USERPROFILE%\.gemini\templates\docs\constitution\tdd.md" "{{args}}\docs\constitution\"}
+!{cp ~/.antigravity/templates/docs/constitution/coding-principles.md "{{args}}/docs/constitution/" && cp ~/.antigravity/templates/docs/constitution/DDD-architecture.md "{{args}}/docs/constitution/" && cp ~/.antigravity/templates/docs/constitution/tdd.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\.antigravity\templates\docs\constitution\coding-principles.md" "{{args}}\docs\constitution\" && copy "%USERPROFILE%\.antigravity\templates\docs\constitution\DDD-architecture.md" "{{args}}\docs\constitution\" && copy "%USERPROFILE%\.antigravity\templates\docs\constitution\tdd.md" "{{args}}\docs\constitution\"}
 ```
