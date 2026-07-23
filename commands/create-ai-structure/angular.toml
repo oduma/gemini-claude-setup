@@ -1,0 +1,30 @@
+# ~/.gemini/commands/create-ai-structure/angular.toml
+description = "Scaffolds standard AI planning directories and copies baseline plus Angular + .NET API template files."
+
+prompt = """
+You are an expert AI Software Architect initializing a workspace for an Angular SPA + .NET API Application in: {{args}}
+
+@{~/.gemini/common/baseline-structure.md}
+
+---
+
+### Additional Angular Stack Files Copy
+Execute shell commands or tool calls to copy the Angular-specific agents and constitution files from `~/.gemini/templates/` to `{{args}}`:
+
+**1. Additional Agents to copy to `{{args}}/.claude/agents/`:**
+- `angular-frontend-developer.md`
+- `angular-material-ux.md`
+
+**2. Additional Constitution to copy to `{{args}}/docs/constitution/`:**
+- `angular-net-api-architecture.md`
+
+**Execution Command:**
+```bash
+!{cp ~/.gemini/templates/.claude/agents/angular-frontend-developer.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/.claude/agents/angular-material-ux.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/docs/constitution/angular-net-api-architecture.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\\.gemini\\templates\\.claude\\agents\\angular-frontend-developer.md" "{{args}}\\.claude\\agents\\" && copy "%USERPROFILE%\\.gemini\\templates\\.claude\\agents\\angular-material-ux.md" "{{args}}\\.claude\\agents\\" && copy "%USERPROFILE%\\.gemini\\templates\\docs\\constitution\\angular-net-api-architecture.md" "{{args}}\\docs\\constitution\\"}
+```
+
+---
+
+### Completion Summary
+After executing the baseline structure initialization and copying the Angular-specific agents and constitution file (`angular-net-api-architecture.md`), output a clean markdown summary confirming that the entire folder structure and all assigned files have been initialized in "{{args}}".
+"""

@@ -5,4 +5,7 @@ prompt = """
 You are an expert AI Software Architect initializing a workspace for a Processor / Daemon / CLI Application in: {{args}}
 
 @{~/.gemini/common/baseline-structure.md}
+
+### Completion Summary
+After executing the directory creation and file copies specified above, output a clean markdown summary confirming that the baseline folder structure, shared agents, and baseline constitutions have been initialized in "{{args}}".
 """
