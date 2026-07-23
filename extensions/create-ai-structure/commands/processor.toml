@@ -1,0 +1,11 @@
+# ~/.gemini/commands/create-ai-structure/processor.toml
+description = "Scaffolds standard AI planning directories and baseline structure for a processor app (Windows Service, Linux Daemon, or CLI Tool)."
+
+prompt = """
+You are an expert AI Software Architect initializing a workspace for a Processor / Daemon / CLI Application in: {{args}}
+
+@{~/.gemini/common/baseline-structure.md}
+
+### Completion Summary
+After executing the directory creation and file copies specified above, output a clean markdown summary confirming that the baseline folder structure, shared agents, and baseline constitutions have been initialized in "{{args}}".
+"""

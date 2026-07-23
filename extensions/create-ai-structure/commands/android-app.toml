@@ -1,0 +1,29 @@
+# ~/.gemini/commands/create-ai-structure/android-app.toml
+description = "Scaffolds standard AI planning directories and copies baseline plus .NET MAUI Android app template files."
+
+prompt = """
+You are an expert AI Software Architect initializing a workspace for an Android App built with .NET MAUI in: {{args}}
+
+@{~/.gemini/common/baseline-structure.md}
+
+---
+
+### Additional MAUI Android Stack Files Copy
+Execute shell commands or tool calls to copy the MAUI-specific agent and constitution files from `~/.gemini/templates/` to `{{args}}`:
+
+**1. Additional Agent to copy to `{{args}}/.claude/agents/`:**
+- `MAUI_UX_ENGINEER.md`
+
+**2. Additional Constitution to copy to `{{args}}/docs/constitution/`:**
+- `maui-architecture.md`
+
+**Execution Command:**
+```bash
+!{cp ~/.gemini/templates/.claude/agents/MAUI_UX_ENGINEER.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/docs/constitution/maui-architecture.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\\.gemini\\templates\\.claude\\agents\\MAUI_UX_ENGINEER.md" "{{args}}\\.claude\\agents\\" && copy "%USERPROFILE%\\.gemini\\templates\\docs\\constitution\\maui-architecture.md" "{{args}}\\docs\\constitution\\"}
+```
+
+---
+
+### Completion Summary
+After executing the baseline structure initialization and copying the MAUI-specific agent (`MAUI_UX_ENGINEER.md`) and constitution file (`maui-architecture.md`), output a clean markdown summary confirming that the entire folder structure and all assigned files have been initialized in "{{args}}".
+"""
