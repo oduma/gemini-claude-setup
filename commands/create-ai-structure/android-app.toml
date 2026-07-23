@@ -1,15 +1,15 @@
-# ~/.gemini/commands/create-ai-structure/android-app.toml
+# ~/.antigravity/commands/create-ai-structure/android-app.toml
 description = "Scaffolds standard AI planning directories and copies baseline plus .NET MAUI Android app template files."
 
 prompt = """
 You are an expert AI Software Architect initializing a workspace for an Android App built with .NET MAUI in: {{args}}
 
-@{~/.gemini/common/baseline-structure.md}
+@{~/.antigravity/common/baseline-structure.md}
 
 ---
 
 ### Additional MAUI Android Stack Files Copy
-Execute shell commands or tool calls to copy the MAUI-specific agent and constitution files from `~/.gemini/templates/` to `{{args}}`:
+Execute shell commands or tool calls to copy the MAUI-specific agent and constitution files from `~/.antigravity/templates/` to `{{args}}`:
 
 **1. Additional Agent to copy to `{{args}}/.claude/agents/`:**
 - `MAUI_UX_ENGINEER.md`
@@ -19,7 +19,7 @@ Execute shell commands or tool calls to copy the MAUI-specific agent and constit
 
 **Execution Command:**
 ```bash
-!{cp ~/.gemini/templates/.claude/agents/MAUI_UX_ENGINEER.md "{{args}}/.claude/agents/" && cp ~/.gemini/templates/docs/constitution/maui-architecture.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\\.gemini\\templates\\.claude\\agents\\MAUI_UX_ENGINEER.md" "{{args}}\\.claude\\agents\\" && copy "%USERPROFILE%\\.gemini\\templates\\docs\\constitution\\maui-architecture.md" "{{args}}\\docs\\constitution\\"}
+!{cp ~/.antigravity/templates/.claude/agents/MAUI_UX_ENGINEER.md "{{args}}/.claude/agents/" && cp ~/.antigravity/templates/docs/constitution/maui-architecture.md "{{args}}/docs/constitution/" 2>/dev/null || copy "%USERPROFILE%\\.antigravity\\templates\\.claude\\agents\\MAUI_UX_ENGINEER.md" "{{args}}\\.claude\\agents\\" && copy "%USERPROFILE%\\.antigravity\\templates\\docs\\constitution\\maui-architecture.md" "{{args}}\\docs\\constitution\\"}
 ```
 
 ---
